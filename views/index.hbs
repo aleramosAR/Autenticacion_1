@@ -1,0 +1,105 @@
+<div class="p-3 mb-2 bg-info text-white mb-5 user-box">
+  <h4 class="m-0">Bienvenido {{username}}</h4>
+  <a href="#" style="display: block; padding-left: 1em; padding-right: 1em;" class="btn btn-warning btn-sm pd-2" onclick="return clickDesloguear()"><strong>Desloguear</strong></a>
+</div>
+<div class="col-md-8 col-lg-5 mx-auto">
+  <form onsubmit="return addProduct(this)">
+    <fieldset class="card">
+      <div class="card-header bg-success text-light">Ingresa un nuevo producto</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="title" class="form-label">Titulo</label>
+          <input type="text" name="title" id="title" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Precio</label>
+          <input type="number" name="price" id="price" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="thumbnail" class="form-label">Nombre de la imagen</label>
+          <input type="text" name="thumbnail" id="thumbnail" class="form-control" />
+          <small class="text-black-50">Ingresar n&deg; desde el 01 al 16 (01, 02, 03, etc.)</small>
+        </div>
+        <button class="btn btn-primary btn-lg float-right mt-3">Agregar producto</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<hr class="mt-5 mb-5" />
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <h4 class="mb-4 text-center">Actualizar producto</h4>
+    <div class="mx-auto">
+      <form onsubmit="return updateProduct(this)">
+        <fieldset class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="mb-3 col-lg-6">
+                <label for="idUp" class="form-label">ID</label>
+                <input type="text" name="idUp" id="idUp" class="form-control" />
+              </div>
+              <div class="mb-3 col-lg-6">
+                <label for="titleUp" class="form-label">Titulo</label>
+                <input type="text" name="titleUp" id="titleUp" class="form-control" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-lg-6">
+                <label for="priceUp" class="form-label">Precio</label>
+                <input type="number" name="priceUp" id="priceUp" class="form-control" />
+              </div>
+              <div class="mb-3 col-lg-6">
+                <label for="thumbnailUp" class="form-label">Nombre de la imagen</label>
+                <input type="text" name="thumbnailUp" id="thumbnailUp" class="form-control" />
+                <small class="text-black-50">N&deg; desde 01 a 16</small>
+              </div>
+            </div>
+            <button class="btn btn-success float-right mt-3">Actualizar producto</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4 class="mb-4 text-center">Eliminar producto</h4>
+    <div class="mx-auto">
+      <form onsubmit="return deleteProduct(this)">
+        <fieldset class="card">
+          <div class="card-body">
+            <label for="id" class="form-label">ID</label>
+            <div class="row">
+              <div class="col-sm-6 col-md-7 mb-1">
+                <input type="text" name="id" id="id" class="form-control" />
+              </div>
+              <div class="col-sm-6 col-md-5">
+                <button class="btn btn-danger float-right btn-block">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<hr class="mt-5 mb-5" />
+<h3 class="mb-5">Listado de productos</h3>
+<div id="productos"></div>
+<hr class="mt-5 mb-5" />
+<h3 class="mb-3">Centro de mensajes</h3>
+<div class="form-row mb-2">
+  <div class="col-6">
+    <label>Nombre</label>
+    <input type="text" name=="username" id="username" class="form-control" placeholder="Tu Nombre" value="{{username}}" />
+  </div>
+</div>
+<form onSubmit="return addMensaje(this)" class="mb-5">
+<div id="mensajes"></div>
+  <div class="form-row">
+    <div class="col-7">
+      <input type="text" name=="texto" id="texto" class="form-control" placeholder="Ingresa un texto..." />
+    </div>
+    <div class="col-2">
+      <input type="submit" class="btn btn-primary col-12" value="Enviar" />
+    </div>
+  </div>
+</form>

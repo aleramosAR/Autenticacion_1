@@ -1,0 +1,1 @@
+export const  MONGO_URI = 'mongodb+srv://user:pass@cluster0.rtfqu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
